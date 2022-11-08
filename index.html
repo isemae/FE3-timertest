@@ -16,13 +16,13 @@
     <div class="timer-container">
       <h1>TIMER</h1>
       <div class="timeInput">
-        <input type="text" id="hour" min="00" max="99" placeholder="00"
+        <input type="text" id="hour" placeholder="00"
           oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 
-        <input type="text" id="minute" min="00" max="60" placeholder="00"
+        <input type="text" id="minute" placeholder="00"
           oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 
-        <input type="text" id="second" min="00" max="99" placeholder="00"
+        <input type="text" id="second" placeholder="00"
           oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
       </div>
       <div class="buttons">
