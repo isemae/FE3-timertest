@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+  <img src="./weniv-logo.png" alt="">
+  <div class="app">
+    <div class="timer-container">
+      <h1>TIMER</h1>
+      <div class="timeInput">
+        <input type="text" id="hour" min="00" max="99" placeholder="00"
+          oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+
+        <input type="text" id="minute" min="00" max="60" placeholder="00"
+          oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+
+        <input type="text" id="second" min="00" max="99" placeholder="00"
+          oninput="handleOnInput(this, 2); this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+      </div>
+      <div class="buttons">
+        <button id="startPauseToggle" class="start">START</button>
+        <button id="reset">RESET</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">ⓒ WENIV CORP.</div>
+</body>
+
+<script>
+  const minute = document.querySelector('#minute')
+  minute.addEventListener('keyup', (value) => {
+    minute.value = minute.value.replace(/\D/g, '');
+    if (minute.value > 59) {
+      minute.value = 59;
+    }
+  })
+
+  function handleOnInput(el, maxlength) {
+    if (el.value.length > maxlength) {
+      el.value
+        = el.value.substr(0, maxlength);
+    }
+  }
+</script>
+
+</html>
