@@ -26,6 +26,7 @@
     /* identical to box height */
     text-transform: uppercase;
     color: #617199;
+    cursor: pointer;
   }
 
   .app {
@@ -95,7 +96,7 @@
     color: #FFFFFF;
   }
 
-  input+input::before {
+  .timeInput:nth-child(2n-1)::before {
     content: ":";
     color: #8198D0;
   }
@@ -125,11 +126,11 @@
     outline: none;
   }
 
-  .buttons {
+  /* .buttons {
     display: flex;
     margin: 0 auto;
     gap: 12px;
-  }
+  } */
 
   .footer {
     font-family: 'Pretendard';

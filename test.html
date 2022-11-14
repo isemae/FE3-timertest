@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style></style>
+</head>
+<style>
+  /* Variabes */
+
+  body {
+    background: $base-color;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+      Helvetica, Arial, "Lucida Grande", sans-serif;
+    height: 100%;
+  }
+
+  .wrapper {
+    width: 800px;
+    margin: 30px auto;
+    color: $white;
+    text-align: center;
+  }
+
+
+  #seconds,
+  #tens {
+    font-size: 2em;
+  }
+
+  button {
+    @include corners(5px);
+    background: $base-color;
+    color: $white;
+    border: solid 1px $white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+  }
+
+  .start {
+    content: "start";
+  }
+
+  button.stop {
+    content: "stop";
+  }
+</style>
+
+<body>
+  <style></style>
+
+  <input class="hour"></input>
+  <input class="minute"></input>
+  <input class="second"></input>
+
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <button id="reset">reset</button>
+  <script src="stopwatch.js"></script>
+</body>
+
+</html>
